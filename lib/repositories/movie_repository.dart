@@ -6,8 +6,8 @@ import 'package:movieapp2/services/movie_service.dart';
 class MovieRepository {
   MovieService _movieService = MovieService();
 
-  Future<List<Movie>> fetchMovies() {
-    return _movieService.fetchMovies();
+  Future<List<Movie>> fetchMovies(startingPage) {
+    return _movieService.fetchMovies(startingPage);
   }
 
   Future<MovieDtails> fetchMovieDetails(id) {
