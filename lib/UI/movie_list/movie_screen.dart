@@ -60,6 +60,7 @@ class MoviesScreen extends StatelessWidget {
               ),
               body: (moviesProvider.movies != null)
                   ? ListView.builder(
+                      controller: moviesProvider.scrollController,
                       itemCount: moviesProvider.movies.length,
                       itemBuilder: (ctx, index) {
                         final movie = moviesProvider.movies[index];
