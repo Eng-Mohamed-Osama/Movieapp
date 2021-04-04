@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:movieapp2/UI/movie_details/movie_details_screen.dart';
 import 'package:movieapp2/UI/movie_list/movie_list_provider.dart';
 import 'package:movieapp2/models/movie.dart';
@@ -14,7 +15,6 @@ class MovieArray extends StatelessWidget {
   const MovieArray({Key key, this.movie, this.index}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    print(this.movie);
     return Padding(
         padding: const EdgeInsets.only(bottom: 0),
         child: new Container(
@@ -152,7 +152,9 @@ class MovieArray extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.only(bottom: 1),
                             child: Text(
-                              'Release on ${movie.releaseDate.toString()}',
+                              "Release on : " +
+                                  DateFormat('yyy/MM/dd')
+                                      .format(movie.releaseDate),
                               style: new TextStyle(
                                   color: Colors.black.withOpacity(.3)),
                               textAlign: TextAlign.start,

@@ -1,6 +1,6 @@
 import 'package:movieapp2/UI/movie_list/movie_list_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:movieapp2/UI/widgets/movie_widget.dart';
+import 'package:movieapp2/UI/movie_list/movie_widget.dart';
 import 'package:provider/provider.dart';
 import 'package:badges/badges.dart';
 

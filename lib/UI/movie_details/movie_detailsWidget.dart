@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:movieapp2/UI/widgets/youtubevideo_player.dart';
 import 'package:movieapp2/models/movie_details.dart';
 import 'package:movieapp2/models/movie_trailer.dart';
@@ -67,7 +68,9 @@ class MovieDetailScreen2 extends StatelessWidget {
                               padding:
                                   const EdgeInsets.only(bottom: 10, left: 5),
                               child: Text(
-                                "Release on " + movie.releaseDate.toString(),
+                                "Release on : " +
+                                    DateFormat('yyy/MM/dd')
+                                        .format(movie.releaseDate),
                                 style: new TextStyle(
                                     color: Colors.black.withOpacity(.5)),
                                 textAlign: TextAlign.start,

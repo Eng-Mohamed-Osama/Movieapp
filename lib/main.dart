@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:movieapp2/UI/actors_list/actors_screen.dart';
-import 'package:movieapp2/UI/widgets/movie_widget.dart';
+import 'package:movieapp2/UI/movie_list/movie_widget.dart';
 import 'package:provider/provider.dart';
 import 'Nav.dart';
 import 'UI/actors_list/actors_list_provider.dart';
