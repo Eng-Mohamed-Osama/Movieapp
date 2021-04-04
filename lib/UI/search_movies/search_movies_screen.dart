@@ -11,44 +11,13 @@ class SearchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-        length: 2,
+        length: 1,
         child: Consumer<MoviesProvider>(
             builder: (buildContext, moviesProvider, _) {
-          var row = Row(
-            children: [
-              Text('MovieLand'),
-              Padding(
-                  padding: const EdgeInsets.only(left: 25),
-                  child: GestureDetector(
-                    child: Badge(
-                      animationType: BadgeAnimationType.scale,
-                      shape: BadgeShape.circle,
-                      badgeColor: Colors.red,
-                      child: Icon(
-                        Icons.favorite,
-                        size: 25,
-                      ),
-                      badgeContent: Text(
-                          '${MoviesProvider.favMovieCount.toString()}',
-                          style: TextStyle(color: Colors.white, fontSize: 12)),
-                    ),
-                  ))
-            ],
-          );
           return Scaffold(
               appBar: AppBar(
-                title: row,
+                title: Text('Search Movies'),
                 backgroundColor: Colors.black,
-                bottom: TabBar(
-                  tabs: <Widget>[
-                    Tab(
-                      text: 'Movies',
-                    ),
-                    Tab(
-                      text: 'TV Shows',
-                    )
-                  ],
-                ),
               ),
               body: Column(
                 children: [

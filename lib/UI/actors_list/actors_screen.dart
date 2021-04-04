@@ -17,21 +17,10 @@ class ActorsScreen extends StatefulWidget {
 
 class _ActorsScreenState extends State<ActorsScreen> {
   int pageNumber = 1;
-  // ScrollController _scrollController = new ScrollController();
 
   @override
   void initState() {
-    // pageNumber = 2;
     super.initState();
-    // ActorProvider provider = Provider.of<ActorProvider>(context, listen: false);
-    // _scrollController.addListener(() {
-    //   if (_scrollController.position.pixels ==
-    //       _scrollController.position.maxScrollExtent) {
-    //     provider.getActors(provider.startingPage);
-    //     provider.startingPage++;
-    //   }
-    // });
-    //
   }
 
   @override
