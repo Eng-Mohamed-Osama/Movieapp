@@ -49,7 +49,7 @@ class SearchScreen extends StatelessWidget {
                           ),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(30),
-                              color: Colors.black.withOpacity(.3))),
+                              color: Color(0xFF151C26))),
                     ),
                   ),
                   Expanded(

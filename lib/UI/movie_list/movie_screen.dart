@@ -68,7 +68,7 @@ class MoviesScreen extends StatelessWidget {
                         final movieindex = index;
                         return MovieArray(
                           movie: movie,
-                          index: movieindex,
+                          index: movie.id,
                         );
                       })
                   : Center(child: CircularProgressIndicator()));

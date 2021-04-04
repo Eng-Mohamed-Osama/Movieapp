@@ -15,7 +15,7 @@ class MovieDetailScreen2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(movieTrailers);
+    print(movieTrailers.name);
     print(movie.id);
     Size size = MediaQuery.of(context).size;
     return Scaffold(
@@ -197,11 +197,11 @@ class MovieDetailScreen2 extends StatelessWidget {
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold)),
                               ),
-                              Padding(
-                                  padding: const EdgeInsets.all(0),
-                                  child: YoutubePlayerwidge(
-                                      youtubeLink:
-                                          movieTrailers.key.toString()))
+                              // Padding(
+                              //     padding: const EdgeInsets.all(0),
+                              //     child: YoutubePlayerwidge(
+                              //         youtubeLink:
+                              //             movieTrailers.key.toString()))
                             ]),
                         decoration: BoxDecoration(
                             boxShadow: [

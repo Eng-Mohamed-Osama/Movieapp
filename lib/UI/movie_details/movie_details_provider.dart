@@ -11,20 +11,23 @@ class MovieDtailsProvider extends ChangeNotifier {
 
   MovieDtailsProvider(id) {
     getMovieDetails(id);
-    getMovieTrailers(id);
+    // getMovieTrailers(id);
   }
 
   void getMovieDetails(id) {
     _movieRepository.fetchMovieDetails(id).then((newMovieDetails) {
       movieDetails = newMovieDetails;
-      notifyListeners();
+      _movieRepository.fetchMovieTrailers(id).then((newMovieTrailer) {
+        movieTrailer = newMovieTrailer;
+        notifyListeners();
+      });
     });
   }
 
-  void getMovieTrailers(id) {
-    _movieRepository.fetchMovieTrailers(id).then((newMovieTrailer) {
-      movieTrailer = newMovieTrailer;
-      notifyListeners();
-    });
-  }
+  // void getMovieTrailers(id) {
+  //   _movieRepository.fetchMovieTrailers(id).then((newMovieTrailer) {
+  //     movieTrailer = newMovieTrailer;
+  //     notifyListeners();
+  //   });
+  // }
 }

@@ -1,36 +1,38 @@
-import 'package:flutter/material.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+// import 'package:flutter/material.dart';
+// import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class YoutubePlayerwidge extends StatefulWidget {
-  YoutubePlayerwidge(
-      {Key key,
-      this.title,
-      YoutubePlayerController controller,
-      bool showVideoProgressIndicator,
-      String youtubeLink,
-      MaterialAccentColor progressIndicatorColor})
-      : super(key: key);
+// class YoutubePlayerwidge extends StatefulWidget {
+//   YoutubePlayerwidge({
+//     Key key,
+//     this.title,
+//     YoutubePlayerController controller,
+//     bool showVideoProgressIndicator,
+//     this.youtubeLink,
+//     MaterialAccentColor progressIndicatorColor,
+//   }) : super(key: key);
 
-  final String title;
+//   final String title;
+//   final String youtubeLink;
 
-  @override
-  _YoutubePlayerwidge createState() => _YoutubePlayerwidge();
-}
+//   @override
+//   _YoutubePlayerwidge createState() => _YoutubePlayerwidge();
+// }
 
-class _YoutubePlayerwidge extends State<YoutubePlayerwidge> {
-  YoutubePlayerController _controller = YoutubePlayerController(
-      initialVideoId: 'SUXWAEX2jlg',
-      flags: YoutubePlayerFlags(
-        autoPlay: false,
-        mute: false,
-      ));
+// class _YoutubePlayerwidge extends State<YoutubePlayerwidge> {
+//   YoutubePlayerController _controller = YoutubePlayerController(
+//       initialVideoId: 'SUXWAEX2jlg',
+//       flags: YoutubePlayerFlags(
+//         autoPlay: false,
+//         mute: false,
+//       ));
 
-  @override
-  Widget build(BuildContext context) {
-    return YoutubePlayer(
-      controller: _controller,
-      showVideoProgressIndicator: true,
-      progressIndicatorColor: Colors.blueAccent,
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     print(widget.youtubeLink);
+//     return YoutubePlayer(
+//       controller: _controller,
+//       showVideoProgressIndicator: true,
+//       progressIndicatorColor: Colors.blueAccent,
+//     );
+//   }
+// }
