@@ -47,10 +47,14 @@ class MoviesProvider extends ChangeNotifier {
   }
 
   void searchingMovies(searchResults) {
-    searchResult = searchResults;
-    filterMovies();
+    if (searchResults != null) {
+      searchResult = searchResults;
+    } else {
+      searchResult = '';
+    }
+    // filterMovies();
     notifyListeners();
-    print(searchResults);
+    // print(searchResults);
 
     // notifyListeners();
   }
