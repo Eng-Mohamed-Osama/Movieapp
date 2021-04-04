@@ -221,6 +221,9 @@ class MovieDetailScreen2 extends StatelessWidget {
                     ),
                   ],
                 ),
+                onTap: () {
+                  Navigator.pop(context);
+                },
               ),
             ),
           ],
