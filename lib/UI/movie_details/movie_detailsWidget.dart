@@ -67,7 +67,7 @@ class MovieDetailScreen2 extends StatelessWidget {
                                     textAlign: TextAlign.start,
                                     style: TextStyle(
                                         fontWeight: FontWeight.w900,
-                                        color: Colors.black,
+                                        color: Colors.white,
                                         fontSize: 25)),
                               ),
                               Padding(
@@ -78,7 +78,7 @@ class MovieDetailScreen2 extends StatelessWidget {
                                       DateFormat('yyy/MM/dd')
                                           .format(movie.releaseDate),
                                   style: new TextStyle(
-                                      color: Colors.black.withOpacity(.5)),
+                                      color: Colors.white.withOpacity(.5)),
                                   textAlign: TextAlign.start,
                                 ),
                               ),
@@ -97,7 +97,7 @@ class MovieDetailScreen2 extends StatelessWidget {
                                             child: Container(
                                               decoration: BoxDecoration(
                                                   border: Border.all(
-                                                      color: Colors.black
+                                                      color: Colors.white
                                                           .withOpacity(.4)),
                                                   borderRadius:
                                                       BorderRadius.circular(
@@ -111,7 +111,7 @@ class MovieDetailScreen2 extends StatelessWidget {
                                                 child: new Text(
                                                   e.toString(),
                                                   style: TextStyle(
-                                                      color: Colors.black
+                                                      color: Colors.white
                                                           .withOpacity(.5)),
                                                 ),
                                               ),
@@ -130,7 +130,7 @@ class MovieDetailScreen2 extends StatelessWidget {
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               color:
-                                                  Colors.black.withOpacity(.8),
+                                                  Colors.white.withOpacity(.8),
                                               fontSize: 15)),
                                       SmoothStarRating(
                                           allowHalfRating: false,
@@ -139,7 +139,7 @@ class MovieDetailScreen2 extends StatelessWidget {
                                           size: 18.0,
                                           isReadOnly: true,
                                           color: Colors.red[900],
-                                          borderColor: Colors.black,
+                                          borderColor: Colors.white,
                                           spacing: 0.0),
                                       Padding(
                                         padding:
@@ -149,14 +149,14 @@ class MovieDetailScreen2 extends StatelessWidget {
                                             textAlign: TextAlign.start,
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold,
-                                                color: Colors.black
+                                                color: Colors.white
                                                     .withOpacity(.8),
                                                 fontSize: 15)),
                                       ),
                                     ],
                                   )),
                               Divider(
-                                color: Colors.black,
+                                color: Colors.white,
                                 height: 20,
                                 thickness: 2,
                               ),
@@ -166,7 +166,7 @@ class MovieDetailScreen2 extends StatelessWidget {
                                 child: Text("Description :",
                                     textAlign: TextAlign.start,
                                     style: TextStyle(
-                                        color: Colors.black,
+                                        color: Colors.white,
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold)),
                               ),
@@ -181,7 +181,7 @@ class MovieDetailScreen2 extends StatelessWidget {
                                     softWrap: true,
                                     textAlign: TextAlign.left,
                                     style: new TextStyle(
-                                        color: Colors.black,
+                                        color: Colors.white,
                                         fontSize: 12,
                                         fontWeight: FontWeight.normal),
                                   ),
@@ -193,7 +193,7 @@ class MovieDetailScreen2 extends StatelessWidget {
                                 child: Text("Trailer :",
                                     textAlign: TextAlign.start,
                                     style: TextStyle(
-                                        color: Colors.black,
+                                        color: Colors.white,
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold)),
                               ),
@@ -212,7 +212,7 @@ class MovieDetailScreen2 extends StatelessWidget {
                                 color: Colors.black.withOpacity(.8),
                               ),
                             ],
-                            color: Colors.white,
+                            color: Color(0xFF151C26),
                             borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(25),
                               topRight: Radius.circular(25),

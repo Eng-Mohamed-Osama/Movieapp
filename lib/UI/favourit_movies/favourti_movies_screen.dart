@@ -17,6 +17,7 @@ class FavMoviesScreen extends StatelessWidget {
       return DefaultTabController(
           length: 3,
           child: Scaffold(
+            backgroundColor: Color(0xFF151C26),
             appBar: AppBar(
               title: Text('Favorite Movies'),
               backgroundColor: Colors.black,

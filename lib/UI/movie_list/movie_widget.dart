@@ -18,7 +18,7 @@ class MovieArray extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 0),
         child: new Container(
           child: Card(
-            elevation: 10,
+            elevation: 25,
             clipBehavior: Clip.antiAlias,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),

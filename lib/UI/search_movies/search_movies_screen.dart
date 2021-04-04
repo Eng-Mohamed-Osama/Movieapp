@@ -3,7 +3,6 @@ import 'package:movieapp2/UI/movie_list/movie_list_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:movieapp2/UI/movie_list/movie_widget.dart';
 import 'package:provider/provider.dart';
-import 'package:badges/badges.dart';
 
 class SearchScreen extends StatelessWidget {
   SearchScreen({Key key, this.title}) : super(key: key);
@@ -60,13 +59,13 @@ class SearchScreen extends StatelessWidget {
                       margin: EdgeInsets.only(top: size.height * .05),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Colors.white.withOpacity(1),
+                        color: Color(0xFF151C26),
                         boxShadow: [
                           BoxShadow(
                             offset: Offset(0, 0),
                             blurRadius: 20,
                             spreadRadius: 10,
-                            color: Colors.black.withOpacity(.8),
+                            color: Color(0xFF151C26),
                           ),
                         ],
                       ),

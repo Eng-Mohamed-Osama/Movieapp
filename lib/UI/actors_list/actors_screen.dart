@@ -28,6 +28,7 @@ class _ActorsScreenState extends State<ActorsScreen> {
     final screenSize = MediaQuery.of(context).size;
 
     return Scaffold(
+      backgroundColor: Color(0xFF151C26),
       appBar: AppBar(
         title: Text('Actors'),
         backgroundColor: Colors.black,

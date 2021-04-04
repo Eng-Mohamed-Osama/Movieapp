@@ -44,6 +44,7 @@ class MoviesScreen extends StatelessWidget {
             ],
           );
           return Scaffold(
+              backgroundColor: Color(0xFF151C26),
               appBar: AppBar(
                 title: row,
                 backgroundColor: Colors.black,
