@@ -5,9 +5,9 @@ import 'package:movieapp2/models/movie_details.dart';
 import 'package:movieapp2/models/movie_trailer.dart';
 
 class MovieService {
-  Future<List<Movie>> fetchMovies() async {
+  Future<List<Movie>> fetchMovies(startingPage) async {
     final response = await http.get(
-        'https://api.themoviedb.org/4/discover/movie?api_key=6557d01ac95a807a036e5e9e325bb3f0&sort_by=popularity.desc');
+        'https://api.themoviedb.org/4/discover/movie?api_key=6557d01ac95a807a036e5e9e325bb3f0&sort_by=popularity.desc&page=$startingPage');
     if (response.statusCode == 200) {
       return List<Movie>.from((json.decode(response.body)["results"] as List)
           .map((e) => Movie.fromJson((e)))).toList();
@@ -16,15 +16,6 @@ class MovieService {
     }
   }
 
-  // Future<dynamic> fetchMovieDetails(int id) async {
-  //   var response = await http.get(
-  //       'https://api.themoviedb.org/3/movie/$id?api_key=6557d01ac95a807a036e5e9e325bb3f0&language=en-US');
-  //   if (response.statusCode == 200) {
-  //     return json.decode(response.body);
-  //   } else {
-  //     throw Exception('FAILED TO LOAD THE MOVIE');
-  //   }
-  // }
   Future<MovieDtails> fetchMovieDetails(int id) async {
     var response = await http.get(
         'https://api.themoviedb.org/3/movie/$id?api_key=6557d01ac95a807a036e5e9e325bb3f0&language=en-US');
