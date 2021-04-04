@@ -4,7 +4,7 @@ import 'package:movieapp2/models/movie_trailer.dart';
 import 'package:movieapp2/repositories/movie_repository.dart';
 
 class MoviesProvider extends ChangeNotifier {
-  List<Movie> movies;
+  List<Movie> movies = [];
   MovieTrailer movieTrailer;
   static int favMovieCount = 0;
   static int startingPage = 1;
@@ -30,7 +30,7 @@ class MoviesProvider extends ChangeNotifier {
 
   void getMovies() {
     _movieRepository.fetchMovies(startingPage).then((newMovie) {
-      movies = newMovie;
+      movies.addAll(newMovie);
       notifyListeners();
     });
   }
