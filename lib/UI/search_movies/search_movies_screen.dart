@@ -21,31 +21,31 @@ class SearchScreen extends StatelessWidget {
               ),
               body: Column(
                 children: [
-                  Container(
-                      padding: EdgeInsets.only(left: 16),
-                      child: TextField(
-                        decoration: InputDecoration(
-                            hintText: 'Search',
-                            hintStyle: TextStyle(color: Colors.blue[300]),
-                            border: InputBorder.none),
-                        onChanged: (text) {
-                          text = text.toLowerCase();
-                          print('from search');
-                          var leength = moviesProvider.movies.where((m) => m
-                              .title
-                              .toLowerCase()
-                              .contains(moviesProvider.searchResult
-                                  .toString()
-                                  .toLowerCase()));
-
-                          moviesProvider.searchingMovies(text);
-                          print(
-                              'FromProvider : ${moviesProvider.searchResult}');
-                          print('Movies : $leength');
-
-                          // movies.where((el) => el.title == text)
-                        },
-                      )),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 25),
+                    child: Center(
+                      child: Container(
+                          width: 300,
+                          clipBehavior: Clip.antiAlias,
+                          padding: EdgeInsets.only(left: 16),
+                          child: TextField(
+                            decoration: InputDecoration(
+                                hintText: 'Search for your favourit Movie',
+                                hintStyle: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 12,
+                                ),
+                                border: InputBorder.none),
+                            onChanged: (text) {
+                              text = text.toLowerCase();
+                              moviesProvider.searchingMovies(text);
+                            },
+                          ),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30),
+                              color: Colors.black.withOpacity(.35))),
+                    ),
+                  ),
                   Expanded(
                     child: SingleChildScrollView(
                         child: SizedBox(
