@@ -19,7 +19,7 @@ class YoutubePlayerwidge extends StatefulWidget {
 
 class _YoutubePlayerwidge extends State<YoutubePlayerwidge> {
   YoutubePlayerController _controller = YoutubePlayerController(
-      initialVideoId: 'SUXWAEX2jlg', // id youtube video
+      initialVideoId: 'SUXWAEX2jlg',
       flags: YoutubePlayerFlags(
         autoPlay: false,
         mute: false,

@@ -24,7 +24,6 @@ class MoviesProvider extends ChangeNotifier {
     if (startingPage == 1) {
       getMovies();
     }
-    getMovies();
     searchingMovies(searchResult);
   }
 

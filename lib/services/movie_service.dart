@@ -22,7 +22,7 @@ class MovieService {
     if (response.statusCode == 200) {
       return movieDtailsFromJson(response.body);
     } else {
-      throw Exception('FAILED TO LOAD THE MOVIE');
+      throw Exception('FAILED TO LOAD THE MOVIE Details');
     }
   }
 
@@ -35,7 +35,7 @@ class MovieService {
       print(movieTrailerFromJson(response.body));
       return movieTrailerFromJson(response.body);
     } else {
-      throw Exception('FAILED TO LOAD THE MOVIE');
+      throw Exception('FAILED TO LOAD THE MOVIE Trailer');
     }
   }
 }
