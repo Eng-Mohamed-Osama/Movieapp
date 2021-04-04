@@ -13,7 +13,7 @@ class MoviesProvider extends ChangeNotifier {
 
   MoviesProvider() {
     getMovies();
-    filterMovies(searchResult);
+    searchingMovies(searchResult);
   }
 
   void getMovies() {
@@ -23,7 +23,7 @@ class MoviesProvider extends ChangeNotifier {
     });
   }
 
-  void filterMovies(searchResult) {
+  void filterMovies() {
     _movieRepository.fetchMovies().then((newMovie) {
       movies = newMovie.where((m) => m.title
           .toLowerCase()
@@ -48,8 +48,10 @@ class MoviesProvider extends ChangeNotifier {
 
   void searchingMovies(searchResults) {
     searchResult = searchResults;
-    print(searchResult);
-
+    filterMovies();
     notifyListeners();
+    print(searchResults);
+
+    // notifyListeners();
   }
 }

@@ -5,7 +5,6 @@ import 'package:movieapp2/UI/movie_list/movie_list_provider.dart';
 import 'package:movieapp2/models/movie.dart';
 import 'package:provider/provider.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
-import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class MovieArray extends StatelessWidget {
@@ -82,42 +81,6 @@ class MovieArray extends StatelessWidget {
                                     ),
                                     onTap: () {
                                       if (movie.fav) {
-                                        Alert(
-                                          context: context,
-                                          type: AlertType.warning,
-                                          title:
-                                              "Are you sure you want to remove it from favourit",
-                                          buttons: [
-                                            DialogButton(
-                                              child: Text(
-                                                "Yes",
-                                                style: TextStyle(
-                                                    color: Colors.red,
-                                                    fontSize: 20),
-                                              ),
-                                              onPressed: () =>
-                                                  Navigator.pop(context),
-                                              color: Color.fromRGBO(
-                                                  0, 179, 134, 1.0),
-                                            ),
-                                            DialogButton(
-                                              child: Text(
-                                                "No",
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 20),
-                                              ),
-                                              onPressed: () =>
-                                                  Navigator.pop(context),
-                                              gradient: LinearGradient(colors: [
-                                                Color.fromRGBO(
-                                                    116, 116, 191, 1.0),
-                                                Color.fromRGBO(
-                                                    52, 138, 199, 1.0)
-                                              ]),
-                                            )
-                                          ],
-                                        ).show();
                                         Fluttertoast.showToast(
                                             msg: "Removed from Favorite",
                                             toastLength: Toast.LENGTH_SHORT,
