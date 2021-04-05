@@ -3,15 +3,14 @@ import 'package:intl/intl.dart';
 import 'package:movieapp2/UI/widgets/youtubevideo_player.dart';
 import 'package:movieapp2/models/movie_details.dart';
 import 'package:movieapp2/models/movie_trailer.dart';
-import 'package:provider/single_child_widget.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
-class MovieDetailScreen2 extends StatelessWidget {
+class MovieDetailsWidget extends StatelessWidget {
   final MovieDtails movie;
   final int index;
   final MovieTrailers movieTrailers;
 
-  MovieDetailScreen2({Key key, this.movie, this.index, this.movieTrailers})
+  MovieDetailsWidget({Key key, this.movie, this.index, this.movieTrailers})
       : super(key: key);
 
   @override

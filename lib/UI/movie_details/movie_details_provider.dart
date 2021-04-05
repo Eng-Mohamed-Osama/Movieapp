@@ -11,7 +11,6 @@ class MovieDtailsProvider extends ChangeNotifier {
 
   MovieDtailsProvider(id) {
     getMovieDetails(id);
-    // getMovieTrailers(id);
   }
 
   void getMovieDetails(id) {
@@ -23,11 +22,4 @@ class MovieDtailsProvider extends ChangeNotifier {
       });
     });
   }
-
-  // void getMovieTrailers(id) {
-  //   _movieRepository.fetchMovieTrailers(id).then((newMovieTrailer) {
-  //     movieTrailer = newMovieTrailer;
-  //     notifyListeners();
-  //   });
-  // }
 }

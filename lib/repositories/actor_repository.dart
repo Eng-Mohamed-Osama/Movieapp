@@ -1,6 +1,6 @@
 import 'package:movieapp2/models/actorProfileImages.dart';
 import 'package:movieapp2/models/actors.dart';
-import 'package:movieapp2/models/actorImages.dart';
+import 'package:movieapp2/models/actorDetails.dart';
 import 'package:movieapp2/services/actor_service.dart';
 
 class ActorRepository {
@@ -10,8 +10,8 @@ class ActorRepository {
     return _actorService.fetchActors(pageNumber);
   }
 
-  Future<ActorInfo> fetchActorImages(id) {
-    return _actorService.fetchActorImages(id);
+  Future<ActorInfo> fetchActorDetails(id) {
+    return _actorService.fetchActorDetails(id);
   }
 
   Future<ProfileImages> fetchActorProfileImages(id) {

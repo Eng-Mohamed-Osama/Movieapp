@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:movieapp2/models/actorImages.dart';
+import 'package:movieapp2/models/actorDetails.dart';
 import 'package:movieapp2/models/actorProfileImages.dart';
 import 'package:movieapp2/models/actors.dart';
 import 'package:http/http.dart' as http;
@@ -16,7 +16,7 @@ class ActorService {
     }
   }
 
-  Future<ActorInfo> fetchActorImages(int id) async {
+  Future<ActorInfo> fetchActorDetails(int id) async {
     var response = await http.get(
         'https://api.themoviedb.org/3/person/$id?api_key=6847b68627ebc19c4139b0a96a7c2351&language=en-US');
     if (response.statusCode == 200) {

@@ -24,7 +24,7 @@ class MovieDetailsScreen extends StatelessWidget {
                 final movieTrailer = movieRepository.movieTrailer;
                 return (movieRepository.movieDetails != null &&
                         movieTrailer != null)
-                    ? MovieDetailScreen2(
+                    ? MovieDetailsWidget(
                         index: id,
                         movie: movieDetails,
                         movieTrailers: movieTrailer,

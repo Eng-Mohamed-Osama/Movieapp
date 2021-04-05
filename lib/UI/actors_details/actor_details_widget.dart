@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_downloader/image_downloader.dart';
-import 'package:movieapp2/models/actorImages.dart';
+import 'package:movieapp2/models/actorDetails.dart';
 import 'package:movieapp2/models/actorProfileImages.dart';
 // import 'package:image_picker_saver/image_picker_saver.dart';
 // import 'package:http/http.dart' as http;
