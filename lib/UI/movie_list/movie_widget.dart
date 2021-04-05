@@ -146,16 +146,15 @@ class MovieArray extends StatelessWidget {
                           SizedBox(
                             width: 250,
                             height: 45,
-                            child: SingleChildScrollView(
-                              child: Text(
-                                '${movie.overview}',
-                                overflow: TextOverflow.clip,
-                                softWrap: true,
-                                textAlign: TextAlign.left,
-                                style: new TextStyle(
-                                    color: Colors.black.withOpacity(.6),
-                                    fontWeight: FontWeight.w300),
-                              ),
+                            child: Text(
+                              '${movie.overview}',
+                              overflow: TextOverflow.fade,
+                              maxLines: 3,
+                              softWrap: true,
+                              textAlign: TextAlign.left,
+                              style: new TextStyle(
+                                  color: Colors.black.withOpacity(.6),
+                                  fontWeight: FontWeight.w300),
                             ),
                           ),
                         ]),
