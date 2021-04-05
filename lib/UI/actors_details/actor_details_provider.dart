@@ -23,6 +23,4 @@ class ActorDetailsProvider extends ChangeNotifier {
       });
     });
   }
-
-  void getActorImages(id) {}
 }
