@@ -72,13 +72,14 @@ class SearchScreen extends StatelessWidget {
                       ),
                       height: 600,
                       child: SizedBox(
-                        child: (moviesProvider.movies.where((m) => m.title
+                        child: (moviesProvider.movies
+                                    .where((m) => m.title
                                         .toLowerCase()
                                         .contains(moviesProvider.searchResult
                                             .toString()
-                                            .toLowerCase())) !=
-                                    null &&
-                                moviesProvider.searchResult != null)
+                                            .toLowerCase()))
+                                    .length >
+                                0)
                             ? ListView.builder(
                                 itemCount: moviesProvider.movies
                                     .where((m) => m.title

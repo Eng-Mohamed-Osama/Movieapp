@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'UI/actors_list/actors_screen.dart';
 import 'UI/favourit_movies/favourti_movies_screen.dart';
 import 'UI/search_movies/search_movies_screen.dart';
-import 'UI/widgets/home_widget.dart';
 import 'UI/movie_list/movie_screen.dart';
 
 class Nav extends StatefulWidget {
@@ -14,7 +13,6 @@ class Nav extends StatefulWidget {
 class _NavbarState extends State<Nav> {
   int _selectedIndex = 0;
   List<Widget> _widgetotpions = <Widget>[
-    HomePage(),
     MoviesScreen(),
     FavMoviesScreen(),
     SearchScreen(),
@@ -33,11 +31,6 @@ class _NavbarState extends State<Nav> {
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Color(0xFF151C26),
         items: <Widget>[
-          Icon(
-            Icons.home,
-            size: 25,
-            color: Colors.white,
-          ),
           Icon(
             Icons.movie,
             size: 25,
