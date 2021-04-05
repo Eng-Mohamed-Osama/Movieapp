@@ -16,6 +16,10 @@ class SearchScreen extends StatelessWidget {
         length: 1,
         child: Consumer<MoviesProvider>(
             builder: (buildContext, moviesProvider, _) {
+          List searchResultList = moviesProvider.movies
+              .where((m) => m.title.toLowerCase().contains(
+                  moviesProvider.searchResult.toString().toLowerCase()))
+              .toList();
           return Scaffold(
               appBar: AppBar(
                 title: Text('Search Movies'),
@@ -75,31 +79,11 @@ class SearchScreen extends StatelessWidget {
                       ),
                       height: size.height * .712,
                       child: SizedBox(
-                        child: (moviesProvider.movies
-                                    .where((m) => m.title
-                                        .toLowerCase()
-                                        .contains(moviesProvider.searchResult
-                                            .toString()
-                                            .toLowerCase()))
-                                    .length >
-                                0)
+                        child: (searchResultList.length > 0)
                             ? ListView.builder(
-                                itemCount: moviesProvider.movies
-                                    .where((m) => m.title
-                                        .toLowerCase()
-                                        .contains(moviesProvider.searchResult
-                                            .toString()
-                                            .toLowerCase()))
-                                    .toList()
-                                    .length,
+                                itemCount: searchResultList.length,
                                 itemBuilder: (ctx, index) {
-                                  final movie = moviesProvider.movies
-                                      .where((m) => m.title
-                                          .toLowerCase()
-                                          .contains(moviesProvider.searchResult
-                                              .toString()
-                                              .toLowerCase()))
-                                      .toList()[index];
+                                  final movie = searchResultList[index];
                                   final movieindex = index;
                                   return Padding(
                                     padding: const EdgeInsets.only(top: 10),
