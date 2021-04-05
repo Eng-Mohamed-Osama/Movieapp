@@ -59,7 +59,10 @@ class SearchScreen extends StatelessWidget {
                       clipBehavior: Clip.antiAlias,
                       margin: EdgeInsets.only(top: size.height * .05),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                          topRight: Radius.circular(20),
+                        ),
                         color: Color(0xFF151C26),
                         boxShadow: [
                           BoxShadow(
@@ -70,7 +73,7 @@ class SearchScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      height: 600,
+                      height: size.height * .712,
                       child: SizedBox(
                         child: (moviesProvider.movies
                                     .where((m) => m.title
