@@ -17,7 +17,10 @@ class MoviesScreen extends StatelessWidget {
             builder: (buildContext, moviesProvider, _) {
           var row = Row(
             children: [
-              Text('MovieLand'),
+              Text(
+                'MovieLand',
+                style: TextStyle(fontStyle: FontStyle.italic),
+              ),
               Padding(
                   padding: const EdgeInsets.only(left: 25),
                   child: GestureDetector(
