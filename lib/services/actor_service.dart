@@ -30,7 +30,6 @@ class ActorService {
     var response = await http.get(
         'https://api.themoviedb.org/3/person/$id/images?api_key=6847b68627ebc19c4139b0a96a7c2351');
     if (response.statusCode == 200) {
-      print(profileImagesFromJson(response.body).profiles[1].filePath);
       return profileImagesFromJson(response.body);
     } else {
       throw Exception('FAILED TO LOAD THE Images');

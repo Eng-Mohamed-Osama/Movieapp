@@ -14,7 +14,7 @@ class MovieRepository {
     return _movieService.fetchMovieDetails(id);
   }
 
-  Future<MovieTrailer> fetchMovieTrailers(id) {
+  Future<MovieTrailers> fetchMovieTrailers(id) {
     return _movieService.fetchMovieTrailers(id);
   }
 }

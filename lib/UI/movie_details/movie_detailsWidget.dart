@@ -9,14 +9,14 @@ import 'package:smooth_star_rating/smooth_star_rating.dart';
 class MovieDetailScreen2 extends StatelessWidget {
   final MovieDtails movie;
   final int index;
-  final MovieTrailer movieTrailers;
+  final MovieTrailers movieTrailers;
 
   MovieDetailScreen2({Key key, this.movie, this.index, this.movieTrailers})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    print(movieTrailers.name);
+    print(movieTrailers.results[0].key);
     print(movie.id);
     Size size = MediaQuery.of(context).size;
     return Scaffold(
@@ -201,11 +201,11 @@ class MovieDetailScreen2 extends StatelessWidget {
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold)),
                               ),
-                              // Padding(
-                              //     padding: const EdgeInsets.all(0),
-                              //     child: YoutubePlayerwidge(
-                              //         youtubeLink:
-                              //             movieTrailers.key.toString()))
+                              Padding(
+                                  padding: const EdgeInsets.all(0),
+                                  child: YoutubePlayerwidge(
+                                      youtubeLink:
+                                          movieTrailers.results[0].key))
                             ]),
                         decoration: BoxDecoration(
                             boxShadow: [

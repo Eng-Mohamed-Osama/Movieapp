@@ -5,7 +5,7 @@ import 'package:movieapp2/repositories/movie_repository.dart';
 
 class MovieDtailsProvider extends ChangeNotifier {
   MovieDtails movieDetails;
-  MovieTrailer movieTrailer;
+  MovieTrailers movieTrailer;
 
   MovieRepository _movieRepository = MovieRepository();
 
