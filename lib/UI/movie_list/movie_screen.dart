@@ -65,7 +65,7 @@ class MoviesScreen extends StatelessWidget {
                       itemCount: moviesProvider.movies.length,
                       itemBuilder: (ctx, index) {
                         final movie = moviesProvider.movies[index];
-                        final movieindex = index;
+                        // final movieindex = index;
                         return MovieArray(
                           movie: movie,
                           index: movie.id,

@@ -3,6 +3,7 @@ import 'package:intl/intl.dart';
 import 'package:movieapp2/UI/widgets/youtubevideo_player.dart';
 import 'package:movieapp2/models/movie_details.dart';
 import 'package:movieapp2/models/movie_trailer.dart';
+import 'package:provider/single_child_widget.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
 class MovieDetailScreen2 extends StatelessWidget {
@@ -171,19 +172,22 @@ class MovieDetailScreen2 extends StatelessWidget {
                                         fontWeight: FontWeight.bold)),
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(left: 5),
+                                padding:
+                                    const EdgeInsets.only(left: 5, bottom: 10),
                                 child: SizedBox(
                                   width: double.infinity,
-                                  height: 80,
-                                  child: Text(
-                                    '${movie.overview}',
-                                    overflow: TextOverflow.clip,
-                                    softWrap: true,
-                                    textAlign: TextAlign.left,
-                                    style: new TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.normal),
+                                  height: 100,
+                                  child: SingleChildScrollView(
+                                    child: Text(
+                                      '${movie.overview}',
+                                      overflow: TextOverflow.clip,
+                                      softWrap: true,
+                                      textAlign: TextAlign.left,
+                                      style: new TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.normal),
+                                    ),
                                   ),
                                 ),
                               ),

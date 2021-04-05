@@ -129,18 +129,22 @@ class MovieDetailScreen extends StatelessWidget {
                                 fontWeight: FontWeight.bold)),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 1),
-                        child: SizedBox(
-                          width: 300,
-                          height: 120,
-                          child: Text(
-                            '${movie.overview}',
-                            overflow: TextOverflow.clip,
-                            softWrap: true,
-                            textAlign: TextAlign.left,
-                            style: new TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
+                        padding: const EdgeInsets.only(left: 1, bottom: 3),
+                        child: SingleChildScrollView(
+                          child: Container(
+                            child: SizedBox(
+                              width: 300,
+                              height: 160,
+                              child: Text(
+                                '${movie.overview}',
+                                overflow: TextOverflow.clip,
+                                softWrap: true,
+                                textAlign: TextAlign.left,
+                                style: new TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
                           ),
                         ),
                       ),
