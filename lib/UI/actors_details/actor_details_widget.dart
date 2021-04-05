@@ -29,7 +29,7 @@ class _ActorDetailWidgetState extends State<ActorDetailWidget> {
   Widget build(BuildContext context) {
     return new Container(
       child: Card(
-        color: Colors.black,
+        color: Color(0xFF151C26),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
