@@ -30,11 +30,10 @@ class MovieArray extends StatelessWidget {
                   child: Hero(
                     tag: 'imageHero$index',
                     child: Image.network(
-                      'https://image.tmdb.org/t/p/w500${movie.posterPath}',
-                      height: 130,
-                      width: 80,
-                      fit: BoxFit.fill,
-                    ),
+                        'https://image.tmdb.org/t/p/w500${movie.posterPath}',
+                        height: 150,
+                        width: 80,
+                        fit: BoxFit.cover),
                   ),
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
@@ -62,7 +61,7 @@ class MovieArray extends StatelessWidget {
                                       textAlign: TextAlign.start,
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: 17)),
+                                          fontSize: 15)),
                                 ),
                                 Expanded(
                                   flex: 1,
@@ -153,6 +152,7 @@ class MovieArray extends StatelessWidget {
                               softWrap: true,
                               textAlign: TextAlign.left,
                               style: new TextStyle(
+                                  fontSize: 12,
                                   color: Colors.black.withOpacity(.6),
                                   fontWeight: FontWeight.w300),
                             ),

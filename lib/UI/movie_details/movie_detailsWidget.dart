@@ -173,7 +173,7 @@ class MovieDetailsWidget extends StatelessWidget {
                                     const EdgeInsets.only(left: 5, bottom: 10),
                                 child: SizedBox(
                                   width: double.infinity,
-                                  height: 100,
+                                  height: 95,
                                   child: SingleChildScrollView(
                                     child: Text(
                                       '${movie.overview}',
