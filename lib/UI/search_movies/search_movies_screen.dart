@@ -35,10 +35,13 @@ class SearchScreen extends StatelessWidget {
                           clipBehavior: Clip.antiAlias,
                           padding: EdgeInsets.only(left: 16),
                           child: TextField(
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
                             decoration: InputDecoration(
                                 hintText: 'Search for your favourit Movie',
                                 hintStyle: TextStyle(
-                                  color: Colors.white,
+                                  color: Colors.white.withOpacity(.6),
                                   fontSize: 12,
                                 ),
                                 border: InputBorder.none),
