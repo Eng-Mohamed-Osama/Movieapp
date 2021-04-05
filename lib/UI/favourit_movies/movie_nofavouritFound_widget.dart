@@ -8,7 +8,7 @@ class NoFileScreen extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Image(
-              image: AssetImage('assets/ae8ac2fa217d23aadcc913989fcc34a2.png'),
+              image: AssetImage('assets/nofilefound.png'),
               fit: BoxFit.fitWidth,
               height: double.infinity,
               width: double.infinity),
