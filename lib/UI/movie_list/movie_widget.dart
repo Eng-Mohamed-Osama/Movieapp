@@ -39,9 +39,7 @@ class MovieArray extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => MovieDetailsScreen(
-                              // index: movie.id,
                               id: movie.id,
-                              // movies: movie,
                               title: movie.title,
                             )));
                   },

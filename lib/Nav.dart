@@ -66,21 +66,5 @@ class _NavbarState extends State<Nav> {
       ),
       body: _widgetotpions.elementAt(_selectedIndex),
     );
-    // return Scaffold(
-    //   body: _widgetotpions.elementAt(_selectedIndex),
-    //   bottomNavigationBar: ConvexAppBar(
-    //     backgroundColor: Colors.black,
-    //     height: 45,
-    //     top: -20,
-    //     items: [
-    //       TabItem(icon: Icons.home, title: 'Home'),
-    //       TabItem(icon: Icons.add, title: 'Add'),
-    //       TabItem(icon: Icons.favorite, title: 'favorite'),
-    //       TabItem(icon: Icons.search, title: 'search'),
-    //     ],
-    //     // initialActiveIndex: 2, //optional, default as 0
-    //     onTap: _itemSwitch,
-    //   ),
-    // );
   }
 }

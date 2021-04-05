@@ -39,12 +39,13 @@ class SearchScreen extends StatelessWidget {
                                 ),
                                 border: InputBorder.none),
                             onChanged: (text) {
-                              // if (text != null) {
-                              text = text.toLowerCase();
-                              moviesProvider.searchingMovies(text);
-                              // } else {
-                              //   moviesProvider.searchingMovies('hthtrhtrrhe');
-                              // }
+                              if (text.length > 0) {
+                                text = text.toLowerCase();
+                                moviesProvider.searchingMovies(text);
+                                print(moviesProvider.searchResult);
+                              } else {
+                                moviesProvider.searchingMovies('null');
+                              }
                             },
                           ),
                           decoration: BoxDecoration(

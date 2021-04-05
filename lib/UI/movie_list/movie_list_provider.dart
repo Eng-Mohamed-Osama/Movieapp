@@ -34,15 +34,6 @@ class MoviesProvider extends ChangeNotifier {
     });
   }
 
-  void filterMovies() {
-    _movieRepository.fetchMovies(startingPage).then((newMovie) {
-      movies = newMovie.where((m) => m.title
-          .toLowerCase()
-          .contains(searchResult.toString().toLowerCase()));
-      notifyListeners();
-    });
-  }
-
   int get getCount => favMovieCount;
 
   void addToFav(Movie movie) {
@@ -52,7 +43,6 @@ class MoviesProvider extends ChangeNotifier {
     } else {
       favMovieCount--;
     }
-    print(favMovieCount);
 
     notifyListeners();
   }
@@ -60,13 +50,7 @@ class MoviesProvider extends ChangeNotifier {
   void searchingMovies(searchResults) {
     if (searchResults != null) {
       searchResult = searchResults;
-    } else {
-      searchResult = '';
     }
-    // filterMovies();
     notifyListeners();
-    // print(searchResults);
-
-    // notifyListeners();
   }
 }

@@ -32,7 +32,6 @@ class MovieService {
     print('ahmed');
 
     if (response.statusCode == 200) {
-      // print(movieTrailersFromJson(response.body));
       return movieTrailersFromJson(response.body);
     } else {
       throw Exception('FAILED TO LOAD THE MOVIE Trailer');

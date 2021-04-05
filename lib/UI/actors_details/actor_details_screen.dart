@@ -8,7 +8,6 @@ class ActorDetailScreen extends StatelessWidget {
 
   final String title;
   final int id;
-  // final ActorProfile actorImages;
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
