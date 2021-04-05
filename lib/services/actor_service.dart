@@ -22,7 +22,7 @@ class ActorService {
     if (response.statusCode == 200) {
       return actorInfoFromJson(response.body);
     } else {
-      throw Exception('FAILED TO LOAD THE Images');
+      throw Exception('FAILED TO LOAD THE actor details');
     }
   }
 

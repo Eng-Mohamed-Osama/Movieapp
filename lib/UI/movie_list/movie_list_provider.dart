@@ -34,15 +34,6 @@ class MoviesProvider extends ChangeNotifier {
     });
   }
 
-  // void filterMovies() {
-  //   _movieRepository.fetchMovies(startingPage).then((newMovie) {
-  //     movies = newMovie.where((m) => m.title
-  //         .toLowerCase()
-  //         .contains(searchResult.toString().toLowerCase()));
-  //     // notifyListeners();
-  //   });
-  // }
-
   int get getCount => favMovieCount;
 
   void addToFav(Movie movie) {

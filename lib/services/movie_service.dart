@@ -29,7 +29,6 @@ class MovieService {
   Future<MovieTrailers> fetchMovieTrailers(id) async {
     var response = await http.get(
         'https://api.themoviedb.org/3/movie/$id/videos?api_key=6847b68627ebc19c4139b0a96a7c2351&language=en-US');
-    print('ahmed');
 
     if (response.statusCode == 200) {
       return movieTrailersFromJson(response.body);

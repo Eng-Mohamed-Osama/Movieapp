@@ -15,8 +15,6 @@ class MovieDetailsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(movieTrailers.results[0].key);
-    print(movie.id);
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.black,

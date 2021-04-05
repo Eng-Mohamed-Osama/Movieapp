@@ -18,7 +18,6 @@ class ActorDetailsProvider extends ChangeNotifier {
       actorsInfo = newActors;
       _actorRepository.fetchActorProfileImages(id).then((newActorImages) {
         actorProfileImages = newActorImages;
-        print('from actor details provider');
         notifyListeners();
       });
     });
