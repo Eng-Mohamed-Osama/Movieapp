@@ -93,132 +93,132 @@ class _ActorDetailWidgetState extends State<ActorDetailWidget> {
                           ),
                         ),
                       ),
-                      Padding(
-                          padding: const EdgeInsets.only(top: 25, bottom: 0),
-                          child: Container(
-                            width: 320,
-                            height: 200,
-                            child: SingleChildScrollView(
-                              child: Wrap(
-                                runSpacing: 0.0,
-                                spacing: 0,
-                                direction: Axis.horizontal,
-                                children: widget.actorProfileImages.profiles
-                                    .map(
-                                      (e) => Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 0, right: 0),
-                                        child: Container(
-                                          height: 100,
-                                          width: 80,
-                                          child: Padding(
-                                            padding: EdgeInsets.only(
-                                                left: 0,
-                                                right: 0,
-                                                top: 0,
-                                                bottom: 0),
-                                            child: GestureDetector(
-                                              child: Center(
-                                                child: new Image.network(
-                                                  'https://image.tmdb.org/t/p/original/${e.filePath}',
-                                                  fit: BoxFit.cover,
+                      Flexible(
+                        child: Padding(
+                            padding: const EdgeInsets.only(top: 25, bottom: 0),
+                            child: Container(
+                              width: 320,
+                              height: 200,
+                              child: SingleChildScrollView(
+                                child: Wrap(
+                                  runSpacing: 0.0,
+                                  spacing: 0,
+                                  direction: Axis.horizontal,
+                                  children: widget.actorProfileImages.profiles
+                                      .map(
+                                        (e) => Padding(
+                                          padding: const EdgeInsets.only(
+                                              left: 0, right: 0),
+                                          child: Container(
+                                            height: 100,
+                                            width: 80,
+                                            child: Padding(
+                                              padding: EdgeInsets.only(
+                                                  left: 0,
+                                                  right: 0,
+                                                  top: 0,
+                                                  bottom: 0),
+                                              child: GestureDetector(
+                                                child: Center(
+                                                  child: new Image.network(
+                                                    'https://image.tmdb.org/t/p/original/${e.filePath}',
+                                                    fit: BoxFit.cover,
+                                                  ),
                                                 ),
-                                              ),
-                                              onTap: () {
-                                                Navigator.push(context,
-                                                    MaterialPageRoute(
-                                                        builder: (_) {
-                                                  return new Scaffold(
-                                                    body: Stack(
-                                                      fit: StackFit.expand,
-                                                      children: [
-                                                        GestureDetector(
-                                                          child:
-                                                              new Image.network(
-                                                            'https://image.tmdb.org/t/p/original/${e.filePath}',
-                                                            fit: BoxFit.cover,
-                                                            height: 600,
-                                                            width:
-                                                                double.infinity,
-                                                            alignment: Alignment
-                                                                .center,
-                                                          ),
-                                                          onTap: () {
-                                                            Navigator.pop(
-                                                                context);
-                                                          },
-                                                        ),
-                                                        Positioned(
-                                                          bottom: MediaQuery.of(
-                                                                      context)
-                                                                  .size
-                                                                  .height *
-                                                              0.14,
-                                                          right: MediaQuery.of(
-                                                                      context)
-                                                                  .size
-                                                                  .width *
-                                                              0.30,
-                                                          child: Container(
-                                                            decoration:
-                                                                BoxDecoration(
-                                                              boxShadow: [
-                                                                BoxShadow(
-                                                                  offset:
-                                                                      Offset(0,
-                                                                          10),
-                                                                  blurRadius:
-                                                                      35,
-                                                                  color: Colors
-                                                                      .black
-                                                                      .withOpacity(
-                                                                          0.8),
-                                                                ),
-                                                              ],
+                                                onTap: () {
+                                                  Navigator.push(context,
+                                                      MaterialPageRoute(
+                                                          builder: (_) {
+                                                    return new Scaffold(
+                                                      body: Stack(
+                                                        fit: StackFit.expand,
+                                                        children: [
+                                                          GestureDetector(
+                                                            child: new Image
+                                                                .network(
+                                                              'https://image.tmdb.org/t/p/original/${e.filePath}',
+                                                              fit: BoxFit.cover,
+                                                              height: 600,
+                                                              width: double
+                                                                  .infinity,
+                                                              alignment:
+                                                                  Alignment
+                                                                      .center,
                                                             ),
-                                                            // ignore: deprecated_member_use
-                                                            child: FlatButton(
-                                                              color:
-                                                                  Colors.white,
-                                                              shape: RoundedRectangleBorder(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .circular(
-                                                                              50)),
-                                                              onPressed: () {
-                                                                _downloadImage(
-                                                                    e);
-                                                              },
-                                                              child: Padding(
-                                                                padding:
-                                                                    const EdgeInsets
-                                                                            .only(
-                                                                        top: 2,
-                                                                        bottom:
-                                                                            2,
-                                                                        left: 5,
-                                                                        right:
-                                                                            5),
-                                                                child: Text(
-                                                                    "Click To Download"),
+                                                            onTap: () {
+                                                              Navigator.pop(
+                                                                  context);
+                                                            },
+                                                          ),
+                                                          Positioned(
+                                                            bottom: MediaQuery.of(
+                                                                        context)
+                                                                    .size
+                                                                    .height *
+                                                                0.14,
+                                                            right: MediaQuery.of(
+                                                                        context)
+                                                                    .size
+                                                                    .width *
+                                                                0.30,
+                                                            child: Container(
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                boxShadow: [
+                                                                  BoxShadow(
+                                                                    offset:
+                                                                        Offset(
+                                                                            0,
+                                                                            10),
+                                                                    blurRadius:
+                                                                        35,
+                                                                    color: Colors
+                                                                        .black
+                                                                        .withOpacity(
+                                                                            0.8),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                              // ignore: deprecated_member_use
+                                                              child: FlatButton(
+                                                                color: Colors
+                                                                    .white,
+                                                                shape: RoundedRectangleBorder(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            50)),
+                                                                onPressed: () {
+                                                                  _downloadImage(
+                                                                      e);
+                                                                },
+                                                                child: Padding(
+                                                                  padding: const EdgeInsets
+                                                                          .only(
+                                                                      top: 2,
+                                                                      bottom: 2,
+                                                                      left: 5,
+                                                                      right: 5),
+                                                                  child: Text(
+                                                                      "Click To Download"),
+                                                                ),
                                                               ),
                                                             ),
-                                                          ),
-                                                        )
-                                                      ],
-                                                    ),
-                                                  );
-                                                }));
-                                              },
+                                                          )
+                                                        ],
+                                                      ),
+                                                    );
+                                                  }));
+                                                },
+                                              ),
                                             ),
                                           ),
                                         ),
-                                      ),
-                                    )
-                                    .toList(),
+                                      )
+                                      .toList(),
+                                ),
                               ),
-                            ),
-                          )),
+                            )),
+                      ),
                     ]))
           ],
         ),
