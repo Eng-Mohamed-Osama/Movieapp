@@ -4,9 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:movieapp2/UI/movie_list/movie_widget.dart';
 import 'package:provider/provider.dart';
 
+// ignore: must_be_immutable
 class SearchScreen extends StatelessWidget {
-  SearchScreen({Key key, this.title}) : super(key: key);
-
+  SearchScreen({
+    Key key,
+    this.title,
+  }) : super(key: key);
   final String title;
   @override
   Widget build(BuildContext context) {
@@ -49,7 +52,6 @@ class SearchScreen extends StatelessWidget {
                               if (text.length > 0) {
                                 text = text.toLowerCase();
                                 moviesProvider.searchingMovies(text);
-                                print(moviesProvider.searchResult);
                               } else {
                                 moviesProvider.searchingMovies('null');
                               }
