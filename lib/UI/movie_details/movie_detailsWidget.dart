@@ -107,7 +107,7 @@ class MovieDetailsWidget extends StatelessWidget {
                                                     top: 5,
                                                     bottom: 5),
                                                 child: new Text(
-                                                  e.toString(),
+                                                  e.name.toString(),
                                                   style: TextStyle(
                                                       color: Colors.white
                                                           .withOpacity(.5)),
