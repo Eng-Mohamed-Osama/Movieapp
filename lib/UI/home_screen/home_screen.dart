@@ -27,7 +27,6 @@ class _HomescreenState extends State<Homescreen> {
 
   @override
   Widget build(BuildContext context) {
-    Row row;
     return DefaultTabController(
         length: 2,
         child: Consumer<MoviesProvider>(
