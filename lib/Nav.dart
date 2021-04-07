@@ -1,9 +1,10 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:movieapp2/UI/home_screen/home_screen.dart';
 import 'UI/actors_list/actors_screen.dart';
 import 'UI/favourit_movies/favourti_movies_screen.dart';
 import 'UI/search_movies/search_movies_screen.dart';
-import 'UI/movie_list/movie_screen.dart';
+// import 'UI/movie_list/movie_screen.dart';
 
 class Nav extends StatefulWidget {
   @override
@@ -13,7 +14,7 @@ class Nav extends StatefulWidget {
 class _NavbarState extends State<Nav> {
   int _selectedIndex = 0;
   List<Widget> _widgetotpions = <Widget>[
-    MoviesScreen(),
+    Homescreen(),
     FavMoviesScreen(),
     SearchScreen(),
     ActorsScreen(),
