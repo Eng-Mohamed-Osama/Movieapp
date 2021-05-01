@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:movieapp2/UI/movie_details/movie_details_screen.dart';
-import 'package:movieapp2/UI/movie_list/movie_list_provider.dart';
+import 'package:movieapp2/colors.dart';
 import 'package:movieapp2/models/movie.dart';
+import 'package:movieapp2/provider/appProvider.dart';
 import 'package:provider/provider.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -11,14 +12,18 @@ class MovieArray extends StatelessWidget {
   final Movie movie;
   final int index;
 
-  const MovieArray({Key key, this.movie, this.index}) : super(key: key);
+  const MovieArray({
+    Key key,
+    this.movie,
+    this.index,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Padding(
         padding: const EdgeInsets.only(bottom: 0),
         child: new Container(
           child: Card(
-            elevation: 25,
+            elevation: 5,
             clipBehavior: Clip.antiAlias,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
@@ -32,15 +37,15 @@ class MovieArray extends StatelessWidget {
                     child: Image.network(
                         'https://image.tmdb.org/t/p/w500${movie.posterPath}',
                         width: 80,
-                        height: 150,
+                        // height: 150,
                         fit: BoxFit.cover),
                   ),
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => MovieDetailsScreen(
-                              id: movie.id,
-                              title: movie.title,
-                            )));
+                            id: movie.id,
+                            title: movie.title,
+                            moviefav: movie)));
                   },
                 ),
                 Expanded(
@@ -72,8 +77,10 @@ class MovieArray extends StatelessWidget {
                                         movie.fav
                                             ? Icons.favorite
                                             : Icons.favorite_border,
-                                        color: movie.fav ? Colors.red : null,
-                                        size: 24,
+                                        color: movie.fav
+                                            ? ColorsCollection.secondaryColor
+                                            : null,
+                                        size: 22,
                                       ),
                                     ),
                                     onTap: () {
@@ -86,7 +93,7 @@ class MovieArray extends StatelessWidget {
                                             backgroundColor: Colors.grey[600]
                                                 .withOpacity(.85),
                                             textColor: Colors.white,
-                                            fontSize: 10.0);
+                                            fontSize: 12.0);
                                       } else if (!movie.fav) {
                                         Fluttertoast.showToast(
                                             msg: "Added to Favorite",
@@ -96,13 +103,12 @@ class MovieArray extends StatelessWidget {
                                             backgroundColor: Colors.grey[600]
                                                 .withOpacity(.85),
                                             textColor: Colors.white,
-                                            fontSize: 10.0);
+                                            fontSize: 12.0);
                                       }
-
-                                      MoviesProvider provider =
-                                          Provider.of<MoviesProvider>(context,
+                                      AppProvider provider =
+                                          Provider.of<AppProvider>(context,
                                               listen: false);
-                                      provider.addToFav(movie);
+                                      provider.addToFav(movie: movie);
                                     },
                                   ),
                                 )
@@ -137,14 +143,14 @@ class MovieArray extends StatelessWidget {
                                       halfFilledIconData: Icons.star_half,
                                       size: 15.0,
                                       isReadOnly: true,
-                                      color: Colors.red[900],
+                                      color: ColorsCollection.secondaryColor,
                                       borderColor: Colors.black,
                                       spacing: 0.0),
                                 ],
                               )),
                           SizedBox(
                             width: 250,
-                            height: 45,
+                            // height: 45,
                             child: Text(
                               '${movie.overview}',
                               overflow: TextOverflow.fade,
