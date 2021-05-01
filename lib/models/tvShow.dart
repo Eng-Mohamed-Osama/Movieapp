@@ -34,6 +34,7 @@ class TvShow {
   String posterPath;
   double voteAverage;
   int voteCount;
+  bool fav = false;
 
   factory TvShow.fromJson(Map<String, dynamic> json) => TvShow(
         backdropPath: json["backdrop_path"],
