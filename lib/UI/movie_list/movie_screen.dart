@@ -1,6 +1,8 @@
-import 'package:movieapp2/UI/movie_list/movie_list_provider.dart';
 import 'package:movieapp2/UI/movie_list/movie_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:movieapp2/colors.dart';
+import 'package:movieapp2/models/movie.dart';
+import 'package:movieapp2/provider/appProvider.dart';
 import 'package:provider/provider.dart';
 
 class MoviesScreen extends StatelessWidget {
@@ -11,9 +13,10 @@ class MoviesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return DefaultTabController(
         length: 1,
-        child: Consumer<MoviesProvider>(
-            builder: (buildContext, moviesProvider, _) {
+        child:
+            Consumer<AppProvider>(builder: (buildContext, moviesProvider, _) {
           return Scaffold(
+              backgroundColor: ColorsCollection.mainColor,
               body: (moviesProvider.movies != null)
                   ? ListView.builder(
                       controller: moviesProvider.scrollController,
