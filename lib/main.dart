@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:movieapp2/UI/actors_list/actors_screen.dart';
-import 'package:movieapp2/UI/movie_list/movie_widget.dart';
+import 'package:movieapp2/colors.dart';
+import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
+import 'package:movieapp2/provider/appProvider.dart';
+import 'package:movieapp2/provider/news_provider.dart';
 import 'package:provider/provider.dart';
 import 'Nav.dart';
-import 'UI/actors_list/actors_list_provider.dart';
-import 'UI/movie_list/movie_list_provider.dart';
-import 'UI/search_movies/search_movies_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,25 +15,27 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([]);
+    FlutterStatusbarcolor.setStatusBarColor(ColorsCollection.mainColor);
     return MultiProvider(
       providers: [
+        // ChangeNotifierProvider(
+        //   create: (context) => MoviesProvider(),
+        // ),
+        // ChangeNotifierProvider<AppProvider>(create: (_) => AppProvider()),
         ChangeNotifierProvider(
-          create: (context) => MoviesProvider(),
-          child: MovieArray(),
+          create: (context) => AppProvider(),
         ),
         ChangeNotifierProvider(
-          create: (context) => MoviesProvider(),
-          child: SearchScreen(),
+          create: (context) => NewsProvider('en', 1),
         ),
-        ChangeNotifierProvider(
-          create: (context) => ActorProvider(),
-          child: ActorsScreen(),
-        ),
+        // ChangeNotifierProvider(
+        //   create: (context) => ActorProvider(),
+        // ),
       ],
       child: MaterialApp(
         title: 'Movie Land',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.red,
         ),
         home: Nav(),
       ),
